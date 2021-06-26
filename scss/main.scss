@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 //Color
 $light-black: #323755;
 $black: #191a32;
@@ -19,7 +21,7 @@ $paragraph: 0.875em;
 
 body {
   overflow-x: hidden;
-  font-family: "poppins";
+  font-family: 'Poppins', sans-serif;
   background: $deep-black;
   margin: 0;
 
@@ -198,6 +200,22 @@ body {
   }
 }
 
+
+//CONTENT SIZE
+.large-horizontal {
+  background: $black;
+  color: white;
+  width: 554;
+  height: 268px;
+}
+
+
+.portfolio {
+  width: 268px;
+  height: 554px;
+  background-size: cover;
+}
+
 //CONTENT STYLES
 
 
@@ -321,6 +339,7 @@ body {
     }
   }
 }
+
 .bio {
   background: $black;
   color: white;
@@ -360,34 +379,26 @@ body {
 
 .portfolio-1 {
   grid-area: portfolio-1;
-  width: 268px;
-  height: 554px;
   background-image: url(../images/pinbuk.png);
-  background-size: cover;
 }
 
 .portfolio-2 {
   grid-area: portfolio-2;
-  width: 268px;
-  height: 554px;
   background-image: url(../images/yuky.png);
-  background-size: cover;
 }
 
 .portfolio-3 {
   grid-area: portfolio-3;
-  width: 268px;
-  height: 554px;
+  
   background-image: url(../images/pinbuk.png);
-  background-size: cover;
+  
 }
 
 .portfolio-4 {
   grid-area: portfolio-4;
-  width: 268px;
-  height: 554px;
+ 
   background-image: url(../images/yuky.png);
-  background-size: cover;
+  
 }
 
 .icon-container {
@@ -421,12 +432,11 @@ body {
   height: 268px;
 }
 
+
 .email {
-  background: $black;
-  color: white;
+ 
   grid-area: email;
-  width: 554;
-  height: 268px;
+  
   padding: 1.25em 2em 1em 2em;
 
   h2 {
@@ -584,36 +594,6 @@ body {
   }
 }
 
-@keyframes moveArrow {
-  0% {
-    transform: translateX(-500%);
-  }
-
-  35% {
-    transform: translateX(-500%);
-  }
-
-  50% {
-    transform: translateX(35%);
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: translateX(0%);
-    transform: rotate(45deg);
-  }
-}
-
-@keyframes moveText {
-  0% {
-    transform: translateX(-300%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 .content-container {
   margin:auto;
   width: fit-content;
@@ -668,14 +648,38 @@ body {
   }
 }
 
-
-
-@media screen and (max-width:375px) {
-
-  body {
-    min-width: 100%;
+@keyframes moveArrow {
+  0% {
+    transform: translateX(-500%);
   }
 
+  35% {
+    transform: translateX(-500%);
+  }
+
+  50% {
+    transform: translateX(35%);
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: translateX(0%);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-300%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@media screen and (max-width:768px) {
   .container {
     padding: 0 2em;
     .navbar,.download-btn {
@@ -684,9 +688,21 @@ body {
   }
 
 .grid-items {
-  width: auto;
+  width: 311px;
+  margin-bottom: 18px;
 }
-  
+
+//CONTENT SIZE//
+
+.large-horizontal {
+  height: fit-content;
+}
+
+.portfolio {
+  height: 642px;
+}
+ 
+// CONTENT STYLE //
   .first {
     .content-container {
       display: block;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 *,
 *::after,
 *::before {
@@ -7,7 +8,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: "poppins";
+  font-family: 'Poppins', sans-serif;
   background: #151529;
   margin: 0;
 }
@@ -205,6 +206,19 @@ body::-webkit-scrollbar-thumb:hover {
 
 .download-btn p .icon {
   margin-left: 0.5em;
+}
+
+.large-horizontal {
+  background: #191a32;
+  color: white;
+  width: 554;
+  height: 268px;
+}
+
+.portfolio {
+  width: 268px;
+  height: 554px;
+  background-size: cover;
 }
 
 .grid-items {
@@ -409,40 +423,28 @@ body::-webkit-scrollbar-thumb:hover {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: portfolio-1;
-  width: 268px;
-  height: 554px;
   background-image: url(../images/pinbuk.png);
-  background-size: cover;
 }
 
 .portfolio-2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: portfolio-2;
-  width: 268px;
-  height: 554px;
   background-image: url(../images/yuky.png);
-  background-size: cover;
 }
 
 .portfolio-3 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: portfolio-3;
-  width: 268px;
-  height: 554px;
   background-image: url(../images/pinbuk.png);
-  background-size: cover;
 }
 
 .portfolio-4 {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
   grid-area: portfolio-4;
-  width: 268px;
-  height: 554px;
   background-image: url(../images/yuky.png);
-  background-size: cover;
 }
 
 .icon-container {
@@ -486,14 +488,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .email {
-  background: #191a32;
-  color: white;
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: email;
-  width: 554;
-  height: 268px;
   padding: 1.25em 2em 1em 2em;
 }
 
@@ -689,74 +687,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: 400;
 }
 
-@-webkit-keyframes moveArrow {
-  0% {
-    -webkit-transform: translateX(-500%);
-            transform: translateX(-500%);
-  }
-  35% {
-    -webkit-transform: translateX(-500%);
-            transform: translateX(-500%);
-  }
-  50% {
-    -webkit-transform: translateX(35%);
-            transform: translateX(35%);
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-}
-
-@keyframes moveArrow {
-  0% {
-    -webkit-transform: translateX(-500%);
-            transform: translateX(-500%);
-  }
-  35% {
-    -webkit-transform: translateX(-500%);
-            transform: translateX(-500%);
-  }
-  50% {
-    -webkit-transform: translateX(35%);
-            transform: translateX(35%);
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-}
-
-@-webkit-keyframes moveText {
-  0% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes moveText {
-  0% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
 .content-container {
   margin: auto;
   width: -webkit-fit-content;
@@ -836,10 +766,75 @@ body::-webkit-scrollbar-thumb:hover {
       grid-template-areas: "portfolio-1 portfolio-2 portfolio-3 portfolio-4";
 }
 
-@media screen and (max-width: 375px) {
-  body {
-    min-width: 100%;
+@-webkit-keyframes moveArrow {
+  0% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
   }
+  35% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  50% {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  35% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  50% {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes moveText {
+  0% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes moveText {
+  0% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .container {
     padding: 0 2em;
   }
@@ -847,7 +842,16 @@ body::-webkit-scrollbar-thumb:hover {
     display: none;
   }
   .grid-items {
-    width: auto;
+    width: 311px;
+    margin-bottom: 18px;
+  }
+  .large-horizontal {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .portfolio {
+    height: 642px;
   }
   .first .content-container {
     display: block;
