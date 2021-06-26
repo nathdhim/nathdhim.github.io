@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
 //Color
 $light-black: #323755;
@@ -21,7 +21,7 @@ $paragraph: 0.875em;
 
 body {
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: $deep-black;
   margin: 0;
 
@@ -45,7 +45,6 @@ body {
 //HEADER STYLES
 
 .container {
-  
   margin-bottom: 4em;
   padding: 0 7.5em;
   position: relative;
@@ -66,6 +65,10 @@ body {
   grid-area: logo;
   left: 0;
   position: absolute;
+  
+  .logo-mobile {
+    display: none;
+  }
 }
 
 .navbar {
@@ -200,7 +203,6 @@ body {
   }
 }
 
-
 //CONTENT SIZE
 .large-horizontal {
   background: $black;
@@ -209,7 +211,6 @@ body {
   height: 268px;
 }
 
-
 .portfolio {
   width: 268px;
   height: 554px;
@@ -217,7 +218,6 @@ body {
 }
 
 //CONTENT STYLES
-
 
 .grid-items {
   position: relative;
@@ -389,16 +389,14 @@ body {
 
 .portfolio-3 {
   grid-area: portfolio-3;
-  
+
   background-image: url(../images/pinbuk.png);
-  
 }
 
 .portfolio-4 {
   grid-area: portfolio-4;
- 
+
   background-image: url(../images/yuky.png);
-  
 }
 
 .icon-container {
@@ -432,11 +430,9 @@ body {
   height: 268px;
 }
 
-
 .email {
- 
   grid-area: email;
-  
+
   padding: 1.25em 2em 1em 2em;
 
   h2 {
@@ -595,22 +591,22 @@ body {
 }
 
 .content-container {
-  margin:auto;
+  margin: auto;
   width: fit-content;
 }
 
 .first {
   grid-area: content-container;
   .content-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 18px 18px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "bio bio portfolio-1 portfolio-2"
-    "dribbble codepen portfolio-1 portfolio-2"
-    "resources email email switch";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 18px 18px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "bio bio portfolio-1 portfolio-2"
+      "dribbble codepen portfolio-1 portfolio-2"
+      "resources email email switch";
   }
 }
 
@@ -619,17 +615,16 @@ body {
   position: relative;
   display: none;
   .content-container {
-    
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 18px 18px;
     grid-auto-flow: row;
-    grid-template-areas: 
-    "bio bio dribbble codepen"
-    "instagram link email email";
+    grid-template-areas:
+      "bio bio dribbble codepen"
+      "instagram link email email";
   }
 }
 
@@ -637,14 +632,14 @@ body {
   grid-area: content-container;
   display: none;
   .content-container {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 18px 18px;
-  grid-auto-flow: row;
-  grid-template-areas: "portfolio-1 portfolio-2 portfolio-3 portfolio-4";
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 18px 18px;
+    grid-auto-flow: row;
+    grid-template-areas: "portfolio-1 portfolio-2 portfolio-3 portfolio-4";
   }
 }
 
@@ -678,32 +673,62 @@ body {
   }
 }
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .container {
-    padding: 0 2em;
-    .navbar,.download-btn {
+    
+    padding: 1em 2em;
+    grid-template-columns: 56px 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 28px 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo download-btn"
+      "navbar navbar"
+      "content-container content-container"
+  }
+
+  .logo, .navbar {
+    margin: auto;
+    position: relative;
+  }
+  
+  .logo {
+    .logo-dekstop {
       display: none;
+    }
+  
+    .logo-mobile {
+      display: grid;
     }
   }
 
-.grid-items {
-  width: 311px;
-  margin-bottom: 18px;
-}
+  .navbar {
+    margin-bottom: 40px;
+  }
 
-//CONTENT SIZE//
+  .grid-items {
+    width: 311px;
+    margin-bottom: 18px;
+  }
 
-.large-horizontal {
-  height: fit-content;
-}
+  //CONTENT SIZE//
 
-.portfolio {
-  height: 642px;
-}
- 
-// CONTENT STYLE //
-  .first {
+  .large-horizontal {
+    height: fit-content;
+  }
+
+  .portfolio {
+    height: 642px;
+  }
+
+  .icon-container,
+  .resources,
+  .switch {
+    height: 311px;
+  }
+
+  // CONTENT STYLE //
+  .first,.second,.third{
     .content-container {
       display: block;
     }

@@ -8,7 +8,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #151529;
   margin: 0;
 }
@@ -57,6 +57,10 @@ body::-webkit-scrollbar-thumb:hover {
   grid-area: logo;
   left: 0;
   position: absolute;
+}
+
+.logo .logo-mobile {
+  display: none;
 }
 
 .navbar {
@@ -836,10 +840,28 @@ body::-webkit-scrollbar-thumb:hover {
 
 @media screen and (max-width: 768px) {
   .container {
-    padding: 0 2em;
+    padding: 1em 2em;
+    -ms-grid-columns: 56px 1fr;
+        grid-template-columns: 56px 1fr;
+    -ms-grid-rows: auto auto auto 1fr;
+        grid-template-rows: auto auto auto 1fr;
+    gap: 28px 0;
+    grid-auto-flow: row;
+        grid-template-areas: "logo download-btn" "navbar navbar" "content-container content-container";
   }
-  .container .navbar, .container .download-btn {
+  .logo, .navbar {
+    margin: auto;
+    position: relative;
+  }
+  .logo .logo-dekstop {
     display: none;
+  }
+  .logo .logo-mobile {
+    display: -ms-grid;
+    display: grid;
+  }
+  .navbar {
+    margin-bottom: 40px;
   }
   .grid-items {
     width: 311px;
@@ -853,7 +875,12 @@ body::-webkit-scrollbar-thumb:hover {
   .portfolio {
     height: 642px;
   }
-  .first .content-container {
+  .icon-container,
+  .resources,
+  .switch {
+    height: 311px;
+  }
+  .first .content-container, .second .content-container, .third .content-container {
     display: block;
   }
 }
