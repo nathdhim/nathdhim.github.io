@@ -849,7 +849,8 @@ body::-webkit-scrollbar-thumb:hover {
     grid-auto-flow: row;
         grid-template-areas: "logo download-btn" "navbar navbar" "content-container content-container";
   }
-  .logo, .navbar {
+  .logo,
+  .navbar {
     margin: auto;
     position: relative;
   }
@@ -880,7 +881,12 @@ body::-webkit-scrollbar-thumb:hover {
   .switch {
     height: 311px;
   }
-  .first .content-container, .second .content-container, .third .content-container {
+  .email .email-box img {
+    display: none;
+  }
+  .first .content-container,
+  .second .content-container,
+  .third .content-container {
     display: block;
   }
 }

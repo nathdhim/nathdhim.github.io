@@ -65,7 +65,7 @@ body {
   grid-area: logo;
   left: 0;
   position: absolute;
-  
+
   .logo-mobile {
     display: none;
   }
@@ -675,7 +675,6 @@ body {
 
 @media screen and (max-width: 768px) {
   .container {
-    
     padding: 1em 2em;
     grid-template-columns: 56px 1fr;
     grid-template-rows: auto auto auto 1fr;
@@ -684,19 +683,20 @@ body {
     grid-template-areas:
       "logo download-btn"
       "navbar navbar"
-      "content-container content-container"
+      "content-container content-container";
   }
 
-  .logo, .navbar {
+  .logo,
+  .navbar {
     margin: auto;
     position: relative;
   }
-  
+
   .logo {
     .logo-dekstop {
       display: none;
     }
-  
+
     .logo-mobile {
       display: grid;
     }
@@ -727,8 +727,19 @@ body {
     height: 311px;
   }
 
+  .email {
+    .email-box {
+      img {
+        display: none;
+      }
+    }
+    
+  }
+
   // CONTENT STYLE //
-  .first,.second,.third{
+  .first,
+  .second,
+  .third {
     .content-container {
       display: block;
     }
