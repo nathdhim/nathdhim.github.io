@@ -6,7 +6,6 @@
 }
 
 body {
-  width: 1366px;
   overflow-x: hidden;
   font-family: "poppins";
   background: #151529;
@@ -206,31 +205,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .download-btn p .icon {
   margin-left: 0.5em;
-}
-
-.first {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: content-container;
-}
-
-.first .content-container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  gap: 18px 18px;
-  grid-auto-flow: row;
-      grid-template-areas: "bio bio portfolio-1 portfolio-2" "dribbble codepen portfolio-1 portfolio-2" "resources email email switch";
 }
 
 .grid-items {
@@ -437,7 +411,7 @@ body::-webkit-scrollbar-thumb:hover {
   grid-area: portfolio-1;
   width: 268px;
   height: 554px;
-  background-image: url(../images/pinbuk.svg);
+  background-image: url(../images/pinbuk.png);
   background-size: cover;
 }
 
@@ -447,7 +421,7 @@ body::-webkit-scrollbar-thumb:hover {
   grid-area: portfolio-2;
   width: 268px;
   height: 554px;
-  background-image: url(../images/yuky.svg);
+  background-image: url(../images/yuky.png);
   background-size: cover;
 }
 
@@ -457,7 +431,7 @@ body::-webkit-scrollbar-thumb:hover {
   grid-area: portfolio-3;
   width: 268px;
   height: 554px;
-  background-image: url(../images/pinbuk.svg);
+  background-image: url(../images/pinbuk.png);
   background-size: cover;
 }
 
@@ -467,7 +441,7 @@ body::-webkit-scrollbar-thumb:hover {
   grid-area: portfolio-4;
   width: 268px;
   height: 554px;
-  background-image: url(../images/yuky.svg);
+  background-image: url(../images/yuky.png);
   background-size: cover;
 }
 
@@ -502,7 +476,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .resources {
-  background-image: url(../images/resources.svg);
+  background-image: url(../images/resources.png);
   background-size: cover;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -783,6 +757,32 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.content-container {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.first {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content-container;
+}
+
+.first .content-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 18px 18px;
+  grid-auto-flow: row;
+      grid-template-areas: "bio bio portfolio-1 portfolio-2" "dribbble codepen portfolio-1 portfolio-2" "resources email email switch";
+}
+
 .second {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -836,9 +836,9 @@ body::-webkit-scrollbar-thumb:hover {
       grid-template-areas: "portfolio-1 portfolio-2 portfolio-3 portfolio-4";
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
   body {
-    width: 100vh;
+    min-width: 100%;
   }
   .container {
     padding: 0 2em;
