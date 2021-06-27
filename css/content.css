@@ -4,6 +4,7 @@
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -202,7 +203,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .content .img-1 {
-  background-image: url(../images/template.png);
+  background-image: url(../images/yuky-cover.png);
 }
 
 .content .img-2 {
