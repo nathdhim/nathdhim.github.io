@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+//Color
+$light-black: #323755;
+$black: #191a32;
+$deep-black: #151529;
+$thin-border: 2px solid $light-black;
+$small-trans: 400ms cubic-bezier(0.65, 0, 0.076, 1);
+$medium-trans: 480ms cubic-bezier(0.65, 0, 0.076, 1);
+
+//font-size
+$big-heading: 2.375em;
+$heading: 1.375em;
+$sub-head: 1em;
+$paragraph: 0.875em;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: $deep-black;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $deep-black;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: $black;
+    border-radius: 5em;
+    transition: background $small-trans;
+    &:hover {
+      background: $light-black;
+    }
+  }
+}
+
+//HEADER STYLES//
+
+.header-container {
+  padding: 2.75em 7.5em;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  .logo {
+    .logo-mobile {
+      display: none;
+    }
+  }
+}
+
+//PRIMARY-BUTTONS//
+.primary-btn {
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  padding: 0.5em;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  img {
+    position: relative;
+    transition: all $small-trans;
+  }
+  span {
+    width: 100%;
+    max-width: 40%x;
+    margin: 0 0.5em;
+    font-size: $paragraph;
+    color: white;
+    position: relative;
+    display: none;
+    transition: all $small-trans;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 5em;
+    background: $deep-black;
+    border: $thin-border;
+    transition: all $small-trans;
+  }
+
+  &:hover,
+  &:active {
+    &::before {
+      right: 0;
+      width: 100%;
+      background: $light-black;
+    }
+    span {
+      display: block;
+      animation: moveText $small-trans;
+    }
+    img {
+      transform: rotate(45deg);
+      animation: moveArrow $medium-trans;
+    }
+  }
+}
+
+//CONTENT STYLES
+.content {
+  display: block;
+
+  //TEXT STYLES
+  .section {
+    padding: 80px 7.5em;
+  }
+
+  .text {
+    margin: 80px 0;
+    align-items: flex-start;
+    display: flex;
+    h2 {
+      margin: 0 2.5em 0 0;
+      font-weight: 700;
+    }
+    p {
+      text-align: justify;
+      margin: 0;
+      width: 792px;
+      font-weight: 400;
+    }
+  }
+
+  h2 , p {
+    font-size: $heading;
+  }
+
+
+  //IMAGES STYLES
+  .img-container {
+    margin: 0;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    img {
+      margin: 0;
+      object-fit: cover;
+      width: 100%;
+      transform: scale(1);
+      transition: all $small-trans;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .full {
+    width: 100%;
+    height: 625px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.171);
+  }
+
+  .img-1 {
+    background-image: url(../images/template.png);
+  }
+
+  .img-2 {
+    background-image: url(../images/template.png);
+  }
+
+  .third-img {
+    margin-bottom: 60px;
+    padding: 0 7.5em;
+    justify-content: space-between;
+    display: flex;
+    .img-container {
+      width: 338px;
+      height: 585px;
+    }
+  }
+  .bottom-container {
+    padding: 0 7.5em;
+    .img-bottom {
+      width: 100%;
+      height: 585px;
+    }
+  }
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  
+  p {
+    text-align:center; 
+  vertical-align: middle;
+  display: table-cell;  
+    a {
+      color: white;
+      font-weight:500;
+      transition: all $small-trans;
+  
+      &:hover {
+        color: #FF851A;
+      }
+    }
+  }
+}
+
+.footer-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: $black;
+  padding: 0.5em 0;
+
+  h3 {
+    font-size: $paragraph;
+    color: white;
+    font-weight: 400;
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(500%);
+  }
+
+  35% {
+    transform: translateX(500%);
+  }
+
+  50% {
+    transform: translateX(35%);
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: translateX(0%);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(300%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
