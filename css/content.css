@@ -431,5 +431,8 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 1em;
     text-align: center;
   }
+  .email p a svg {
+    width: 90px;
+  }
 }
 /*# sourceMappingURL=content.css.map */

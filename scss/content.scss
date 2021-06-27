@@ -364,6 +364,11 @@ body {
     p {
       font-size: $sub-head;
       text-align: center;
+      a {
+        svg {
+          width: 90px;
+        }
+      }
     }
     
   }
